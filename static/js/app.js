@@ -4,6 +4,7 @@ function optionChanged (value) {
   data_table(value);
 }
 
+//function for graphs
 function graphs(id) {
   d3.json("./static/js/samples.json").then((importedData) => {
       var clean_data = importedData.samples.filter(item => item.id === id);
@@ -14,7 +15,7 @@ function graphs(id) {
       var wfreq = clean_data[0].wfreq;
 
       
-
+      //append information into list for bar
       var information = [];
 
       for ( var i = 0 ; i < names.length ; i++ ) {
@@ -46,7 +47,8 @@ function graphs(id) {
         };
   
       var data_bar = [trace_bar];
-
+      
+      //append points in for marker 
       var points = [];
 
       for ( var i = 0 ; i < values.length ; i++ ) {
@@ -126,6 +128,7 @@ function graphs(id) {
   });
 }
 
+//build out table for description of selection
 function data_table(id) {
   d3.json("./static/js/samples.json").then((importedData) => {
   var info_lst = importedData.metadata.filter(item => item.id === parseInt(id));
