@@ -42,8 +42,8 @@ function graphs(id) {
             showgrid: true
           },
           
-          paper_bgcolor: 'rgb(245,280,480)',
-          plot_bgcolor: 'rgb(245,280,480)',
+          paper_bgcolor: 'rgb(255,255,255)',
+          plot_bgcolor: 'rgb(255,255,255)',
         };
   
       var data_bar = [trace_bar];
@@ -71,8 +71,8 @@ function graphs(id) {
             showgrid: true,
             title : 'OTU IDs'
           },
-          paper_bgcolor: 'rgb(245,280,480)',
-          plot_bgcolor: 'rgb(245,280,480)',
+          paper_bgcolor: 'rgb(255,255,255)',
+          plot_bgcolor: 'rgb(255,255,255)',
         }; 
       var data_bubble = [trace_bubble];
 
@@ -118,10 +118,10 @@ function graphs(id) {
             ]
           }
         }
-      ];
+      ]
       
       var layout_gauge = {
-        paper_bgcolor: 'rgb(245,280,480)'
+        paper_bgcolor: 'rgb(255,255,255)'
       };
 
       Plotly.newPlot('gauge', data_gauge, layout_gauge);
